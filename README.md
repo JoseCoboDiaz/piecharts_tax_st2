@@ -3,7 +3,7 @@ This pipeline was designed to transform the output files from SourceTracker2 pip
 
 The first step is run sourcetracker2 with <i>--per_sink_feature_assignments</i>, remember that as a <i>.biom</i> format is need to run SourceTracker2, you can transform your <i>.txt</i> abundance matrix by adding <i># Constructed from biom file</i> at first line, and <i>#OTU ID</i> as the header of first column. Samples have to been represented by columns while taxa are represented by rows, using the total count matrix (not transformed to percentage). So, after this modifications, SourceTracker2 can be run by:
 
-        sourcetracker2 --sink_rarefaction_depth 0 --source_rarefaction_depth 0 -i matrix_abundance.txt -m metadata_pie.txt -o st2_output/ --jobs 11 --per_sink_feature_assignments
+        sourcetracker2 -i matrix_abundance.txt -m metadata_pie.txt -o st2_output/ --jobs 11 --per_sink_feature_assignments
 
 where metadata_pie.txt is a 3 column matrix with <i>Sample ID</i>, <i>SourceSink</i> and <i>Env</i> as headers.
 
