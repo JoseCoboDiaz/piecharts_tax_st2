@@ -7,8 +7,9 @@ The first step is run sourcetracker2 with <i>--per_sink_feature_assignments</i>,
 
 where metadata_pie.txt is a 3 column matrix with <i>Sample ID</i>, <i>SourceSink</i> and <i>Env</i> as headers.
 
-After that, the obtained matrices has to been filtered to keep those taxa with highest influence on SourceTracker analysis, by run this script:
+After that, the obtained matrices has to been filtered to keep those taxa with highest influence on SourceTracker analysis, by run these scripts (the first one is only to fix format issues):
 
+        ruby 00.quote_header.rb        
         ruby 01.auto_recalculate.rb
 
 Now, we need to extract the list of taxa with importance among all the samples analyzed, to re-run the <i>auto_recalculate</i> script taking all these taxa: 
