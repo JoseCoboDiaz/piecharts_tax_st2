@@ -12,6 +12,8 @@ After that, the obtained matrices has to been filtered to keep those taxa with h
         ruby 00.quote_header.rb        
         ruby 01.auto_recalculate.rb
 
+*** The cut-off selected for chose taxa is 0.5%, if you want to change it modify the line 11 of <i>01.recalculate_st2.R</i>
+
 Now, we need to extract the list of taxa with importance among all the samples analyzed, to re-run the <i>auto_recalculate</i> script taking all these taxa: 
                
         ruby 01b.select_taxa.rb
